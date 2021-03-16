@@ -19,8 +19,9 @@ Roboto has good coverage of Roman, Greek, and Cyrillic alphabets.
 ## Usage
 
 ``` toit
-import roboto.14_regular as roboto_14
-import roboto.14_regular_italic as roboto_14i
+import font show *
+import roboto.regular_14 as roboto_14
+import roboto.regular_italic_14 as roboto_14i
 
 MY_FONT ::= Font [roboto_14.ASCII, roboto_14.CURRENCY_SYMBOLS]
 MY_ITALICS ::= Font [roboto_14i.ASCII]
