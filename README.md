@@ -1,6 +1,6 @@
 # Roboto
 
-## Roboto sans-serif fonts for Toit devices
+Roboto sans-serif fonts for Toit devices.
 
 This is a scalable sans-serif font used on Android phones among other places.
 
