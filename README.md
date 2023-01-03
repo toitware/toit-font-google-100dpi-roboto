@@ -8,7 +8,8 @@ The bitmap versions here have been automatically generated, and
 can be a little rough around the edges, especially on low resolution
 displays.  They are available in larger sizes than the hand-optimized
 bitmap fonts.  The upstream source is
-git://github.com/googlefonts/roboto.git
+git://github.com/googlefonts/roboto.git and can be fetched with
+`git submodule update --init --recursive`.
 
 The styles are thin, light, regular, medium, bold, and black.
 Each style is also available in an italic variant.  Sizes are 10,
