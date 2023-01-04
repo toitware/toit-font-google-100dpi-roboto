@@ -14,7 +14,7 @@ main:
     BI64.text_extent "Ḝ"
 
   WIDTH := 40
-  HEIGHT := 96
+  HEIGHT := 80
   BYTE_HEIGHT := HEIGHT / 8
   bit_map := ByteArray WIDTH * BYTE_HEIGHT
 
@@ -24,11 +24,15 @@ main:
   bitmap_draw_text 1 (HEIGHT - 16) COLOR ORIENTATION "Ḝ" BI64 bit_map WIDTH
 
   BYTE_HEIGHT.repeat: | y1 |
-    8.repeat: | y2 |
+    4.repeat: | y2 |
       line := bit_map[y1 * WIDTH..(y1 + 1) * WIDTH]
-      mask := 1 << y2
+      mask1 := 1 << (y2 * 2)
+      mask2 := 1 << (y2 * 2 + 1)
       str := ""
-      line.do: str += it & mask == 0 ? " " : "█"
-      if y1 == 3 and y2 == 2: expect_equals "                 ████████   █████████   " str
+      line.do:
+        top := (it & mask1 != 0) ? 1 : 0
+        bot := (it & mask2 != 0) ? 2 : 0
+        str += [" ", "▀", "▄", "█"][top + bot]
+      if y1 == 1 and y2 == 1: expect_equals "                 ████████▄▄▄████████▀   " str
       print str
 
