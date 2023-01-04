@@ -1,3 +1,3 @@
 [submodule "third_party/roboto"]
 	path = third_party/roboto
-	url = git@github.com:googlefonts/roboto.git
+	url = https://github.com/googlefonts/roboto.git

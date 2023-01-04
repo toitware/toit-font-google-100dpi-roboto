@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (C) 2020 Toitware ApS. All rights reserved.
+# Copyright (C) 2023 Toitware ApS. All rights reserved.
 
 # Produce verbose or terse .toit files.
 VERBOSE=
@@ -27,7 +27,8 @@ mkdir -p $OUT_100DPI
 # TODO(3279): For larger sizes we need to fix the issue that limits font files
 # to 4k.
 # Smaller sizes than 10 are too ugly in automatically rasterized fonts.
-# Larger sizes than 36 create too large font files, currently.
+# Larger sizes than 36 create large font files, which can affect program
+# size and compiler performance.
 for size in 10 11 12 14 16 18 20 22 24 28 32 36 40 44 48 56 64
 do
   for weight in BlackItalic Black BoldItalic Bold MediumItalic Medium Italic Regular LightItalic Light ThinItalic Thin

@@ -8,12 +8,12 @@ The bitmap versions here have been automatically generated, and
 can be a little rough around the edges, especially on low resolution
 displays.  They are available in larger sizes than the hand-optimized
 bitmap fonts.  The upstream source is
-git://github.com/googlefonts/roboto.git and can be fetched with
+https://github.com/googlefonts/roboto.git and can be fetched with
 `git submodule update --init --recursive`.
 
 The styles are thin, light, regular, medium, bold, and black.
 Each style is also available in an italic variant.  Sizes are 10,
-11, 12, 14, 16, 18, 20, 22, 24, 28, 32, and 36.
+11, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 44, 48, 56, and 64.
 
 Roboto has good coverage of Roman, Greek, and Cyrillic alphabets.
 
