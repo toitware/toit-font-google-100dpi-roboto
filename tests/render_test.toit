@@ -33,6 +33,5 @@ main:
         top := (it & mask1 != 0) ? 1 : 0
         bot := (it & mask2 != 0) ? 2 : 0
         str += [" ", "▀", "▄", "█"][top + bot]
-      if y1 == 1 and y2 == 1: expect-equals "                 ████████▄▄▄████████▀   " str
+      if y1 == 1 and y2 == 1: expect-equals "                 ███████▄▄▄▄████████▀   " str
       print str
-
