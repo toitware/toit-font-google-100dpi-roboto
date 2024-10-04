@@ -19,7 +19,7 @@ DIR_PKG=.
 DIR_ROBOTO=$DIR_PKG/third_party/roboto
 OUT_100DPI=$DIR_PKG/src/
 TOITC="jag run -d host"
-CONVERT="-- ../../toitlang/toit-font-tools/app/convertfont.toit --doc_comments $VERBOSE"
+CONVERT="-- ../toit-font-tools/bin/convertfont.toit --doc_comments $VERBOSE"
 FONT_FORGE=tools/convert.fontforge
 
 mkdir -p $OUT_100DPI
