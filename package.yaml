@@ -1,4 +1,4 @@
 name: roboto
 description: Roboto sans-serif fonts for Toit devices.
 environment:
-  sdk: ^2.0.0-alpha.100
+  sdk: ^2.0.0-alpha.150

@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        # The versions should contain (at least) the lowest requirement
+        #    and a version that is more up to date.
+        toit-version: [ v2.0.0-alpha.150, latest ]
+        include:
+          - toit-version: v2.0.0-alpha.150
+            version-name: old
+          - toit-version: latest
+            version-name: new
+
+    name: CI - ${{ matrix.os }} - ${{ matrix.version-name }}
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: toitlang/action-setup@v1
+        with:
+          toit-version: ${{ matrix.toit-version }}
+
+      - name: Test
+        run: |
+          make test
